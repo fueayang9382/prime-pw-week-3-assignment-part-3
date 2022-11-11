@@ -76,13 +76,13 @@ console.log('7. Showing supplyChanges with "for of" loop');
 console.log( '---7 my work starts here---------------------------------------------');
 
 for(x of supplyChanges ){
-    if( supplyChanges[x] > 0){
-        console.log('Added parts', supplyChanges[x]);
-    }else if( supplyChanges[x] == 0 ){
-        console.log('no changes', supplyChanges[x]);
+    if( x > 0){
+        console.log('Added parts', x);
+    }else if( x == 0 ){
+        console.log('no changes', x);
     }
     else{
-        console.log('Removed parts', supplyChanges[x]);
+        console.log('Removed parts', x);
     }
 }
 
@@ -112,17 +112,15 @@ console.log( '---8 my work ends here--------------------------------------------
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
 
-//572%7 = 81 boxes ==567 parts ; 5 parts left over
+//572%7 = 81 boxes == 567 parts ; 5 parts left over
 // while leftOver > 5 keep filling the boxex
 
-let totalPart = 572;
-leftOvers = 572; 
+let totalParts = 572; 
 boxFillled = 0; 
 
-while (totalParts%7) {
-    console.log(boxFilled = boxFilled + totalParts[x]);
-    totalParts++;
-    if(leftover == 5) {
-        
-    }
+while( totalParts > 6 ) { //while totalParts is greater than six run the code below. 
+        totalParts -= 7; // remove 7 from totalParts   
+        boxFillled++; // increase boxFilled by one.  This loop back to the beginning 
+
 }
+console.log(`parts left over: ${totalParts} and how many boxes filled: ${boxFillled}` );
